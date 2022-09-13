@@ -1,7 +1,9 @@
 # DRL_Bidding_TRE
 Realtime Bidding strategy for Swiss TRE-market with DRL algorithm
 # Introduction
-The final implementation of the real-time bidding strategy for the Swiss TRE-market is called "TRE_MaxtrixBidding".
+- The final implementation of the real-time bidding strategy for the Swiss TRE-market is the "TRE_MaxtrixBidding" project.
+- the project "DQN" contains a prototype wfor a low-level bidding-strategry
+- the prject 
 It's based on the implementation of a PyTorch version of Branching Double Deep Q-Learning from repo https://github.com/MoMe36/BranchingDQN.
 The TRE_MaxtrixBidding implements a Reinforcement Learning control method to evaluate 5 prices for bidding for positiv TRE market with discretized vector for volume (like 5, 7, 10... 50Mw) and discretized vector of price ratio between 1.3 and 10 used for volume and price (price ratio * waterprice) for the bids.
 The merit oder princinple is implemented: Bids are odered by price then by volume, volume is activated until sum of volume activated is reached and until maxVolume is reached, we use for TRE (for the moment 50MWh).
