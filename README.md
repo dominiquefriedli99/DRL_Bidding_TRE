@@ -1,16 +1,20 @@
 # Introduction
 This project "TRE_MaxtrixBidding" is the final implementaton. 
+
 It is based on the implementation of a PyTorch version of Branching Double Deep Q-Learning from repo https://github.com/MoMe36/BranchingDQN.
-The TRE_MaxtrixBidding implements a Reinforcement Learning control method to evaluate 5 prices for bidding for positiv TRE market with discretized vector for volume (like 5, 7, 10... 50Mw) and discretized vector of price ratio between 1.3 and 10 used for volume and price (price ratio * waterprice) for the bids.
-The merit oder princinple is implemented: Bids are odered by price then by volume, volume is activated until sum of volume activated is reached and until maxVolume is reached, we use for TRE (for the moment 50MWh).
-The implemented agent (traderDqnAgent) uses the data from Swissgrid of the last hour, the day-ahead price and forecast data of consumption/production for the current hour to estimate the bids.
+The TRE_MaxtrixBidding implements a Reinforcement Learning-Agent who optimizes 5 prices for bidding for Swiss TRE market in up direction.
+The action Space contains discretized vector for volume (like 5, 7, 10... 50) and discretized vector for price ratios between 1.3 and 2.5 used for volume (in MWh) and price (price ratio * waterprice) in € for the bids.
+
+The merit oder princinple is implemented in the reward function: Bids are odered by price then by volume, volume is activated until sum of volume activated is reached and until the maximal volume of 50 MWh is reached. This is a contraint for this market.
+The implemented agent (traderDqnAgent) uses the bidding data from Swissgrid of the last hour, the day-ahead price and forecast data of consumption/production for the current hour to estimate the bids.
 
 Constraint: maximal 50MW per hour can be sold. 
-the data is in Folder /Data. Unzip the tre_data_202x first.
+the data is in Folder/Data. There is no data for the moment, as the files were to large
+
 In the Dataframe.py the dataset is featured to add state information for the agent.
 The project implements the training of the model with neuronal networks and the DQN-control method. 
 The count of episodes to train can be set in the _init_.py file. 15 epsisodes is suggested. 
-The bid-method runs the trained model for the test data and returns cumulated profit, successfull bids and control results for fix behaviour (like always 1.2 * waterprice).
+The bid-method runs the trained model for the test data and returns cumulated profit, successfull bids and control results for fix behaviour (like always 1.2 * waterprice) and much more key figures
 
 the Project "DQN" contains a prototype of the bidding strategy, implememtation is based on https://github.com/mome36/DoubleDQN 
 the Project "TRE_BranchingDQN" is based on the implementation of a PyTorch version of Branching Double Deep Q-Learning from repo https://github.com/MoMe36/BranchingDQN. It optimizes the price only.
