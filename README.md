@@ -34,9 +34,3 @@ start the _init_.py file
 on the Runner class there are different run methods to generate output or plots.
 The agent will train x times (run the train_data) and then run the "bid"-method for the train_data. 
 Use the functions on Runner to plot train effort
-
-# Contribute
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
