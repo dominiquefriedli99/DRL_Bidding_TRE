@@ -5,7 +5,6 @@ import torch.optim as optim
 from torch.distributions import Categorical 
 import random
 from torchvision import models
-from torchsummary import summary
 
 class DuelingNetwork(nn.Module): 
 

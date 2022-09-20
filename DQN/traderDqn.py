@@ -56,12 +56,3 @@ class DQN(Model):
           mixed_weights = target_ratio + online_ratio
           new_target_weights.append(mixed_weights)
         self.internal_model.set_weights(new_target_weights)
-
-
-# if __name__ == "__main__":
-#     dqn = DQN(
-#         state_shape=3,
-#         num_actions=3,
-#         learning_rate=0.001
-#     )
-#     dqn.internal_model.summary()
