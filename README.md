@@ -21,7 +21,6 @@ the Project "TRE_BranchingDQN" is based on the implementation of a PyTorch versi
 
 # Getting Started
 The final implementation is implemented with Anaconda3 2022.11
-=======
 # DRL_Bidding_TRE
 Realtime Bidding strategy for Swiss TRE-market with DRL algorithm
 # Introduction
